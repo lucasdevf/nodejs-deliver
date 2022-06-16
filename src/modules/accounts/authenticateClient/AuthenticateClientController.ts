@@ -8,11 +8,11 @@ export class AuthenticateUserController {
 
     const authenticateClientUseCase = new AuthenticateClientUseCase()
 
-    const client = await authenticateClientUseCase.execute({
+    const token = await authenticateClientUseCase.execute({
       username,
       password
     })
 
-    return response.json(client)
+    return response.json(token)
   }
 }

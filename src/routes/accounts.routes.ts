@@ -1,10 +1,13 @@
 import { Router } from "express";
-import { AuthenticateUserController } from "../modules/accounts/authenticateClient/AuthenticateClientController";
+import { AuthenticateClientController } from "../modules/accounts/authenticateClient/AuthenticateClientController";
+import { AuthenticateDeliverymanController } from "../modules/accounts/authenticateDeliveryman/AuthenticateDeliverymanController";
 
 const accountsRoutes = Router()
 
-const authenticateUserController = new AuthenticateUserController()
+const authenticateClientController = new AuthenticateClientController()
+const authenticateDeliverymanController = new AuthenticateDeliverymanController()
 
-accountsRoutes.post('/sessions', authenticateUserController.handle)
+accountsRoutes.post('/sessions/client', authenticateClientController.handle)
+accountsRoutes.post('/sessions/deliveryman', authenticateDeliverymanController.handle)
 
 export { accountsRoutes }

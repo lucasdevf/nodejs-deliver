@@ -30,7 +30,7 @@ export class AuthenticateClientUseCase {
       {
         username: clientExists.username
       },
-      String(process.env.JWT_PRIVATE_KEY),
+      "1a36591bceec49c832079e270d7e8b73",
       {
         subject: clientExists.id,
         expiresIn: '1d'

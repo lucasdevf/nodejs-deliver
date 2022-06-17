@@ -1,6 +1,6 @@
 import { Router } from "express";
 import { ensureAuthenticatedClient } from "../middlewares/ensureAuthenticatedClient";
-import { ensureAuthenticatedDeliveryman } from "../middlewares/ensureAuthenticateDeliverman";
+import { ensureAuthenticatedDeliveryman } from "../middlewares/ensureAuthenticatedDeliveryman";
 import { CreateDeliveryController } from "../modules/deliveries/useCases/createDelivery/CreateDeliveryController";
 import { FindAvailableDeliveriesController } from "../modules/deliveries/useCases/findAvailableDeliveries/FindAvailableDeliveriesController";
 

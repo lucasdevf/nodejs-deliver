@@ -30,7 +30,7 @@ export class AuthenticateDeliverymanUseCase {
       {
         username: deliverymanExists.username
       },
-      String(process.env.JWT_PRIVATE_KEY),
+      "1a36591bciic49c832079e270d7e8b73",
       {
         subject: deliverymanExists.id,
         expiresIn: '1d'
